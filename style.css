@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #87CEEB; /* Colore dello sfondo */
+}
+
+#loading {
+  font-size: 24px;
+  color: white;
+}
+
+#mondo {
+  width: 800px; /* Larghezza del mondo di gioco */
+  height: 600px; /* Altezza del mondo di gioco */
+  border: 2px solid black;
+  position: relative;
+  background-color: lightblue; /* Colore di base del mondo */
+  overflow: hidden; /* Nascondi eventuali elementi che fuoriescono */
+  background-size: cover; /* Adatta lo sfondo senza deformazioni */
+  background-repeat: no-repeat; /* Non ripetere l'immagine */
+}
+
+#ludo {
+  width: 100px; /* Dimensione massima per il personaggio */
+  height: auto; /* Altezza automatica per mantenere le proporzioni */
+  max-height: 100%; /* Limita l'altezza massima al contenitore */
+  position: absolute;
+  bottom: 0;
+  left: 50px; /* Posizione iniziale del personaggio */
+  background-size: contain; /* Adatta l'immagine senza deformazioni */
+  background-repeat: no-repeat; /* Non ripetere l'immagine */
+  background-position: center; /* Centra l'immagine nel contenitore */
+}
+
+.ostacolo, .nemico, .oggetto {
+  position: absolute;
+  background-color: transparent; /* Sfondo trasparente per gli oggetti */
+}
+
+.nemico {
+  width: 50px; /* Dimensione del nemico */
+  height: auto; /* Altezza automatica per mantenere le proporzioni */
+  max-height: 100%; /* Limita l'altezza massima al contenitore */
+  background-size: contain; /* Adatta l'immagine senza deformazioni */
+  background-repeat: no-repeat; /* Non ripetere l'immagine */
+  background-position: center; /* Centra l'immagine nel contenitore */
+}
+
+.oggetto {
+  width: 30px; /* Dimensione dell'oggetto */
+  height: auto; /* Altezza automatica per mantenere le proporzioni */
+  max-height: 100%; /* Limita l'altezza massima al contenitore */
+}
+
+.joystick-container {
+  position: absolute;
+  bottom: 20px;
+}
+
+#joystick-movimento {
+  left: 20px;
+}
+
+#joystick-poteri {
+  right: 20px;
+}
+
+.joystick-button {
+  width: 50px;
+  height: 50px;
+  background-color: gray;
+  border-radius: 50%;
+  margin: 10px;
+  display: inline-block;
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+  color: white;
+}
+
+.joystick-button:active {
+  background-color: #0056b3; /* Colore scuro quando il pulsante è premuto */
+}
+
+.hidden {
+  display: none; /* Classe per nascondere elementi */
+}
